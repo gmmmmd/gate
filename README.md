@@ -1,5 +1,9 @@
-# Тестовое здание
 
+<h1>
+  <a align="center" href="https://deploy-gate.vercel.app/">Сcылка на deploy</a>
+</h1>
+![alt text](./snapshot.png)
+# Тестовое здание
 
 1. Сделать GET запрос на адрес https://jsonplaceholder.typicode.com/posts/?_start=0&_limit=7
 2. Обработать ответ и отрисовать элементы массива в html. 
