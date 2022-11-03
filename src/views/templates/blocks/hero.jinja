@@ -1,3 +1,27 @@
-<!--
-  В этом шаблоне должен быть блок с первым экраном – https://cln.sh/AoEYYP
--->
+<section class="hero">
+  <div class="hero__container container">
+    <form class="hero__search-form" id="searchForm">
+      <label for="search" class="hero__search-label" >
+        <input type="text" id="search" name="search" class="hero__search-input" placeholder="search...">
+      </label>
+      <button class="hero__btn">Search</button>
+    </form>
+    <div class="hero__posts" data-posts-container>
+      <template data-posts-template>
+        <div class="hero__card" data-id>
+          <h2 class="hero__title" data-title></h2>
+          <p class="hero__description" data-description></p>
+          <div class="hero__input-wrapper">
+            <input id="color" name="value" type="checkbox" data-value class="hero__change-theme-input">            
+          </div>
+        </div>
+      </template>
+    </div>
+    <div class="hero__pagination" data-pagination-container>
+      <template data-pagination-template>
+        <div class="hero__page" data-page></div>
+      </template>
+    </div>
+  </div>
+  <div id="loading"></div>
+</section>

@@ -16,42 +16,5 @@
   Import all other blocks
 */
 @import "_blocks/container";
-
-/*
-  Ниже пример подключения других блоков
-
-  Каждый новый файл должен отвечать за конкретный блок в терминах БЭМ (https://ru.bem.info/methodology/key-concepts/#%D0%B1%D0%BB%D0%BE%D0%BA)
-  Список блоков перечислил в файле views/index.jinja
-
-  Для именования селекторов давайте придерживаться стиля two dashes (https://ru.bem.info/methodology/naming-convention/#%D1%81%D1%82%D0%B8%D0%BB%D1%8C-two-dashes)
-  block-name__element-name--modificator
-*/
-
-/*
-  Код ниже нужно удалить, он добавлен просто для примера
-  Не стал выносить в отдельный файл, но если бы блок coming-soon действительно был бы нужен, то он должен был бы быть в файле _blocks/coming-soon.scss
-*/
-
-.coming-soon {
-  color: blue;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-  min-height: 100vh;
-  margin: auto;
-  padding: 0 5vw;
-
-  &__title {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: space-between;
-    font-size: 25vw;
-    font-weight: 400;
-    margin: 0 auto;
-    text-transform: uppercase;
-    width: 100%;
-  }
-}
+@import "_blocks/preloader";
+@import "_blocks/hero";

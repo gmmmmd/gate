@@ -1,0 +1,148 @@
+.hero {
+  position: relative;
+
+  &__search-form {
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  &__search-label {
+    max-width: 335px;
+    width: 100%;
+  }
+
+  &__search-input {
+    width: 100%;
+    padding: 5px 15px;
+    border: 2px solid black;
+    transition: border-color 0.4s ease-in;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      border-color: gray;
+    }
+  }
+
+  &__btn {
+    @include no-btn;
+
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    padding: 0 24px;
+    transition: background-color 0.4s ease-in;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: gray;
+    }
+  }
+
+  &__posts {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+
+    @media (min-width: $media-tablet) {
+      flex-flow: row wrap;
+      justify-content: center;
+      align-items: normal;
+    }
+  }
+
+  &__card {
+    position: relative;
+    margin: 0;
+    width: 100%;
+    min-height: 230px;
+    max-width: 300px;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    transition:
+      background-color 0.4s ease-in,
+      color 0.4s ease-in;
+
+    &--dark {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__description {
+    margin: 0;
+  }
+
+  &__input-wrapper {
+    position: absolute;
+    left: 14px;
+    bottom: 40px;
+  }
+
+  &__change-theme-input {
+    position: absolute;
+    appearance: none;
+    cursor: pointer;
+    width: 270px;
+    height: 30px;
+    border: none;
+    background: black;
+    border-radius: 3px;
+
+    &:checked {
+      appearance: none;
+      width: 270px;
+      height: 30px;
+      background: white;
+      border-radius: 3px;
+    }
+  }
+
+  &__pagination {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 35px 0;
+
+    @media (min-width: $media-tablet) {
+      justify-content: flex-start;
+      padding-left: 50px;
+    }
+  }
+
+  &__page {
+    cursor: pointer;
+    font-size: 18px;
+    border: 1px solid black;
+    border-radius: 3px;
+    width: 45px;
+    text-align: center;
+
+    &--active {
+      font-weight: 700;
+    }
+  }
+}
